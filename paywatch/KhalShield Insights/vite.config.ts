@@ -47,6 +47,9 @@ function nodeBuiltinRequireToEsm() {
 export default defineConfig({
   vite: {
     plugins: [nodeBuiltinRequireToEsm()],
+    preview: {
+      allowedHosts: true,
+    },
     resolve: {
       alias: [
         // whatwg-url (via the MongoDB connection-string parser) pulls in tr46,
